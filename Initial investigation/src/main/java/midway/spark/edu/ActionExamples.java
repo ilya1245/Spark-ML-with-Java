@@ -27,5 +27,16 @@ public class ActionExamples {
         for (String str : strs) {
             System.out.println(str);
         }
+
+
+        /* Listing 3-6  Serialization ERROR!!!*/
+/*    case class Contact(id: Long, name: String, email: String)
+    val contactData = Array("1#John Doe#jdoe@domain.com", "2#Mary Jane#mjane@domain.com")
+    val contactDataRDD = spark.sparkContext.parallelize(contactData)
+    val contactRDD = contactDataRDD.map(l => {
+      val contactArray = l.split("#")
+      Contact(contactArray(0).toLong, contactArray(1), contactArray(2))
+    })
+    contactRDD.collect.foreach(println)*/
     }
 }
