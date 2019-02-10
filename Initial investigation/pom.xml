@@ -3,17 +3,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>spark_ml_with_java</groupId>
-    <artifactId>swj</artifactId>
+    <artifactId>swjs</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>swj1</name>
+    <name>Spark Java and Scala investigation</name>
     <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <jackson.version>2.9.8</jackson.version>
     </properties>
 
     <repositories>
@@ -40,6 +41,13 @@
             <version>2.8</version>
         </dependency>
 
+        <!--   Hadoop   -->
+<!--        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>3.2.0</version>
+        </dependency>-->
+
         <!--   SPARK   -->
         <dependency>
             <groupId>org.apache.spark</groupId>
@@ -57,12 +65,39 @@
             <version>2.4.0</version>
         </dependency>
 
+        <!--Deep Learning-->
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-core</artifactId>
+            <version>1.0.0-beta3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native-platform</artifactId>
+            <version>1.0.0-beta3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.72</version>
+        </dependency>
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>dl4j-spark_2.11</artifactId>
+            <version>1.0.0-beta3_spark_2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-kryo_2.11</artifactId>
+            <version>1.0.0-beta3</version>
+        </dependency>
+
+        <!--   graphframes   -->
         <dependency>
             <groupId>graphframes</groupId>
             <artifactId>graphframes</artifactId>
             <version>0.7.0-spark2.4-s_2.11</version>
         </dependency>
-
 
         <!--   SCALA   -->
         <dependency>
@@ -75,6 +110,38 @@
             <artifactId>scala-maven-plugin</artifactId>
             <version>3.4.4</version>
         </dependency>
+
+        <!-- Force Jackson versions to match Spark. This usually only matters for Spark local, not Spark submit -->
+ <!--       <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-scala_2.11</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jdk8</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>-->
 
     </dependencies>
 
